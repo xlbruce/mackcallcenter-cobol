@@ -11,7 +11,7 @@
 
        inicio.
        
-           call "Validador-CPF" using valido, cpf
+           call "VALIDA-CPF" using valido, cpf
            
            display valido at 1010
            stop run.

@@ -62,7 +62,7 @@
 	<!-- cobol_file_set_1 -->
 	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
 		<file srcdir="MacKallCenter" name="Menu-Principal.cbl"/>
-		<file srcdir="MacKallCenter" name="Validador-CPF.cbl"/>
+		<file srcdir="MacKallCenter" name="VALIDA-CPF.cbl"/>
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
@@ -85,9 +85,9 @@
 			</mffilelist>
 		</cobol>
 	</target>
-	<mfdirlist id="dirset.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\Validador-CPF.cbl" refid="cobol_directive_set_1"/>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\VALIDA-CPF.cbl" refid="cobol_directive_set_1"/>
 	<mffilelist refid="cobol.copybook.locations"/>
-	<target name="FileCompile.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\Validador-CPF.cbl" depends="init">
+	<target name="FileCompile.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\VALIDA-CPF.cbl" depends="init">
 		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
@@ -102,7 +102,7 @@
 	<!-- Default -->
 	<mffilelist id="cobol.default.object.files" srcdir="${basedir}/New_Configuration.bin" type="objfile">
 		<file name="Menu-Principal${objext}"/>
-		<file name="Validador-CPF${objext}"/>
+		<file name="VALIDA-CPF${objext}"/>
 	</mffilelist>
 	<!--  *************************  -->
 	<!--  * Configuration targets *  -->

@@ -5,11 +5,105 @@
          <path enabled="true" name="/MacKallCenter" type="mfpath"/>
          <path enabled="true" name="/MacKallCenter/MacKallCenter" type="mfpath"/>
          <path enabled="true" name="/MacKallCenter/MacKallCenter/New_Configuration.bin" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/hooks" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/info" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/logs" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/logs/refs" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/logs/refs/heads" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/logs/refs/remotes" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/logs/refs/remotes/origin" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/05" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/08" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/16" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/39" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/41" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/44" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/45" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/62" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/63" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/68" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/73" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/74" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/90" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/94" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/95" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/a8" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/ab" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/ad" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/b3" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/b4" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/b9" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/bd" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/c9" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/cf" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/d2" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/d3" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/db" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/dc" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/e1" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/f0" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/f2" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/info" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/objects/pack" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/refs" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/refs/heads" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/refs/remotes" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/refs/remotes/origin" type="mfpath"/>
+         <path enabled="false" name="/MacKallCenter/.git/refs/tags" type="mfpath"/>
       </copybook-paths>
       <build-precedence-paths xsi:type="buildPrecedenceSettings">
          <path enabled="true" name="/MacKallCenter" type="mfpath"/>
          <path enabled="true" name="/MacKallCenter/MacKallCenter" type="mfpath"/>
          <path enabled="true" name="/MacKallCenter/MacKallCenter/New_Configuration.bin" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/hooks" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/info" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/logs" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/logs/refs" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/logs/refs/heads" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/logs/refs/remotes" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/logs/refs/remotes/origin" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/05" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/08" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/16" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/39" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/41" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/44" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/45" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/62" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/63" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/68" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/73" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/74" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/90" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/94" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/95" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/a8" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/ab" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/ad" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/b3" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/b4" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/b9" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/bd" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/c9" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/cf" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/d2" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/d3" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/db" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/dc" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/e1" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/f0" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/f2" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/info" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/objects/pack" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/refs" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/refs/heads" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/refs/remotes" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/refs/remotes/origin" type="mfpath"/>
+         <path enabled="true" name="/MacKallCenter/.git/refs/tags" type="mfpath"/>
       </build-precedence-paths>
       <configurations default="New Configuration" xsi:type="buildConfigurationsContainer">
          <configuration description="New Configuration" type="single_exe" is64bit="false" createlbr="false" platform="Windows" xsi:type="cobolBuildConfiguration">
@@ -142,7 +236,7 @@
       <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
       <filetype type="cobol" xsi:type="cobolFileContainer">
          <file compile="true" path="MacKallCenter/Menu-Principal.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="MacKallCenter/Validador-CPF.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="MacKallCenter/VALIDA-CPF.cbl" xsi:type="cobolFile"/>
       </filetype>
    </files>
 </project>

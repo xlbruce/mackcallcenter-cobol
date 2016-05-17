@@ -6,12 +6,14 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        01 TMP-DATA.
-           05 ANO-TMP PIC X(4).
-           05 MES-TMP PIC XX.
-           05 DIA-TMP PIC XX.
+           05 ANO-TMP PIC 9(4).
+           05 MES-TMP PIC 99.
+           05 DIA-TMP PIC 99.
        01 W-DATA.
            05 DIA PIC XX.
+           05 FILLER VALUE "/".
            05 MES PIC XX.
+           05 FILLER VALUE "/".
            05 ANO PIC XXXX.
        77 OPC PIC 9 VALUE ZERO.
            88 OPC-OK VALUES 1 THRU 4.
@@ -47,7 +49,7 @@
            05  LINE 20  COLUMN 41 
                VALUE  "อออออออออออออออออออออออออออออออออออ".
            05  S-DATA
-               LINE 03  COLUMN 67  PIC XX/XX/XXXX
+               LINE 03  COLUMN 66  PIC XX(10)
                FROM  W-DATA.
            05  S-OPC
                LINE 18  COLUMN 35  PIC 9
@@ -62,7 +64,7 @@
              
        PROCEDURE DIVISION.
        INICIO.
-           ROT-DATA.
+           PERFORM ROT-DATA.
            DISPLAY TELA
            
            PERFORM WITH TEST AFTER UNTIL OPC EQUAL 4
@@ -85,7 +87,7 @@
            STOP RUN.
            
        ROT-DATA.
-           ACCEPT W-DATA FROM DATE YYYYMMDD.
+           ACCEPT TMP-DATA FROM DATE YYYYMMDD.
            MOVE DIA-TMP TO DIA.
            MOVE MES-TMP TO MES.
            MOVE ANO-TMP TO ANO.

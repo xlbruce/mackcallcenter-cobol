@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MacKallCenter" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
+<project name="mackcallcenter-cobol" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
 	<typedef name="mffilelist" classname="com.microfocus.ant.TypeFileList"/>
 	<typedef name="mfdirlist" classname="com.microfocus.ant.TypeDirectiveList"/>
 	<typedef name="mfdestfilelist" classname="com.microfocus.ant.TypeDestinationFileList"/>
@@ -66,17 +66,15 @@
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
-		<path type="copybook" name="${MacKallCenter}"/>
-		<path type="copybook" name="${MacKallCenter}/MacKallCenter"/>
-		<path type="copybook" name="${MacKallCenter}/MacKallCenter/New_Configuration.bin"/>
+		<path type="copybook" name="${mackcallcenter-cobol}"/>
 	</mffilelist>
 	<!--  ****************************************  -->
 	<!--  * COBOL Source Files and Directive Set *  -->
 	<!--  ****************************************  -->
 	<!-- dirset.New_Configuration -->
-	<mfdirlist id="dirset.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\Menu-Principal.cbl" refid="cobol_directive_set_1"/>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\Menu-Principal.cbl" refid="cobol_directive_set_1"/>
 	<mffilelist refid="cobol.copybook.locations"/>
-	<target name="FileCompile.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\Menu-Principal.cbl" depends="init">
+	<target name="FileCompile.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\Menu-Principal.cbl" depends="init">
 		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
@@ -85,9 +83,9 @@
 			</mffilelist>
 		</cobol>
 	</target>
-	<mfdirlist id="dirset.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\VALIDA-CPF.cbl" refid="cobol_directive_set_1"/>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\VALIDA-CPF.cbl" refid="cobol_directive_set_1"/>
 	<mffilelist refid="cobol.copybook.locations"/>
-	<target name="FileCompile.New_Configuration.C:\Temp\MacKallCenter\MacKallCenter\VALIDA-CPF.cbl" depends="init">
+	<target name="FileCompile.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\VALIDA-CPF.cbl" depends="init">
 		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
@@ -155,7 +153,7 @@
 	</target>
 	<target name="init" depends="os.init,os.init.windows,os.init.unix">
 		<property environment="env"/>
-		<property name="MacKallCenter" value="${basedir}"/>
+		<property name="mackcallcenter-cobol" value="${basedir}"/>
 		<property name="cfg" value="New_Configuration"/>
 		<property name="cfgtarget" value="cfg.${cfg}"/>
 		<property name="forceCompile" value="true"/>

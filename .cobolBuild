@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="mackcallcenter-cobol" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
+<project name="MacKallCenter" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
 	<typedef name="mffilelist" classname="com.microfocus.ant.TypeFileList"/>
 	<typedef name="mfdirlist" classname="com.microfocus.ant.TypeDirectiveList"/>
 	<typedef name="mfdestfilelist" classname="com.microfocus.ant.TypeDestinationFileList"/>
@@ -63,10 +63,14 @@
 	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
 		<file srcdir="MacKallCenter" name="Menu-Principal.cbl"/>
 		<file srcdir="MacKallCenter" name="VALIDA-CPF.cbl"/>
+		<file srcdir="MacKallCenter" name="PGM11.cbl"/>
+		<file srcdir="MacKallCenter" name="PGM12.cbl"/>
+		<file srcdir="MacKallCenter" name="PGM13.cbl"/>
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
-		<path type="copybook" name="${mackcallcenter-cobol}"/>
+		<path type="copybook" name="${MacKallCenter}"/>
+		<path type="copybook" name="${MacKallCenter}/MacKallCenter"/>
 	</mffilelist>
 	<!--  ****************************************  -->
 	<!--  * COBOL Source Files and Directive Set *  -->
@@ -94,6 +98,39 @@
 			</mffilelist>
 		</cobol>
 	</target>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM11.cbl" refid="cobol_directive_set_1"/>
+	<mffilelist refid="cobol.copybook.locations"/>
+	<target name="FileCompile.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM11.cbl" depends="init">
+		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
+			<mffilelist type="srcfile" srcdir="${basedir}">
+				<file name="${filename}"/>
+			</mffilelist>
+		</cobol>
+	</target>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM12.cbl" refid="cobol_directive_set_1"/>
+	<mffilelist refid="cobol.copybook.locations"/>
+	<target name="FileCompile.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM12.cbl" depends="init">
+		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
+			<mffilelist type="srcfile" srcdir="${basedir}">
+				<file name="${filename}"/>
+			</mffilelist>
+		</cobol>
+	</target>
+	<mfdirlist id="dirset.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM13.cbl" refid="cobol_directive_set_1"/>
+	<mffilelist refid="cobol.copybook.locations"/>
+	<target name="FileCompile.New_Configuration.C:\Temp\mackcallcenter-cobol\MacKallCenter\PGM13.cbl" depends="init">
+		<cobol destdir="${basedir}/New_Configuration.bin" is64bit="false" threadedRts="true" forceCompile="${forceCompile}" failonerror="${cobolFailOnError}" debug="true" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="dirset.New_Configuration.${filename}"/>
+			<mffilelist type="srcfile" srcdir="${basedir}">
+				<file name="${filename}"/>
+			</mffilelist>
+		</cobol>
+	</target>
 	<!--  ****************  -->
 	<!--  * Object files *  -->
 	<!--  ****************  -->
@@ -101,6 +138,9 @@
 	<mffilelist id="cobol.default.object.files" srcdir="${basedir}/New_Configuration.bin" type="objfile">
 		<file name="Menu-Principal${objext}"/>
 		<file name="VALIDA-CPF${objext}"/>
+		<file name="PGM11${objext}"/>
+		<file name="PGM12${objext}"/>
+		<file name="PGM13${objext}"/>
 	</mffilelist>
 	<!--  *************************  -->
 	<!--  * Configuration targets *  -->
@@ -153,7 +193,7 @@
 	</target>
 	<target name="init" depends="os.init,os.init.windows,os.init.unix">
 		<property environment="env"/>
-		<property name="mackcallcenter-cobol" value="${basedir}"/>
+		<property name="MacKallCenter" value="${basedir}"/>
 		<property name="cfg" value="New_Configuration"/>
 		<property name="cfgtarget" value="cfg.${cfg}"/>
 		<property name="forceCompile" value="true"/>

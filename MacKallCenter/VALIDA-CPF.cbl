@@ -59,9 +59,9 @@
            end-if
            
            if d1 = dig(10) and d2 = dig(11) then
-               move 0 to retorno
-           else
                move 1 to retorno
+           else
+               move 0 to retorno
            end-if
            
            exit program.

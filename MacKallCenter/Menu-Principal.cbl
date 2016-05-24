@@ -75,7 +75,7 @@
            DISPLAY MSG-BRANCO
            ELSE
            EVALUATE OPC
-           WHEN 1 CALL "PGM1"
+           WHEN 1 CALL "PGM11" 
            WHEN 2 CALL "PGM2"
            WHEN 3 CALL "PGM3"
            END-EVALUATE

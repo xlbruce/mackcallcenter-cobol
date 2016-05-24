@@ -35,8 +35,17 @@
           05 DATA-ULTIMA-ALTERACAO PIC X(10).
        
        working-storage section.
+       01 SYS-DATE.
+           05 ANO PIC 9999.
+           05 MES PIC 99.
+           05 DIA PIC 99.
        77 ST-CLIENTE PIC XX VALUE SPACES.
        77 RESP PIC X VALUE SPACE.
+       01 LINHA.
+           05 FILLER VALUE "    ".
+           05 L PIC X(72) VALUE ALL "อ".
+           05 FILLER VALUE "    ".
+           
        01 W-DATE.
            05 DIA PIC 99.
            05 MES PIC 99.
@@ -54,120 +63,73 @@
        
        SCREEN SECTION.
        01  TELA.
-           05  LINE 01  COLUMN 01 
-               VALUE  "    ออออออออออออออออออออออออออออออออออออ".
-           05  LINE 01  COLUMN 41 
-               VALUE  "อออออออออออออออออออออออออออออออออออ".
-           05  LINE 03  COLUMN 01 
-               VALUE  "                                TVMACK".
-           05  LINE 05  COLUMN 01 
-               VALUE  "    INCLUSAO DE CLIENTE".
-           05  LINE 07  COLUMN 01 
-               VALUE  "    ออออออออออออออออออออออออออออออออออออ".
-           05  LINE 07  COLUMN 41 
-               VALUE  "อออออออออออออออออออออออออออออออออออ".
-           05  LINE 09  COLUMN 01 
-               VALUE  "    CPF DO CLIENTE.: [           ]".
-           05  LINE 10  COLUMN 01 
-               VALUE  "    NOME DO CLIENTE: [".
-           05  LINE 10  COLUMN 41 
-               VALUE  "            ]".
-           05  LINE 11  COLUMN 01 
-               VALUE  "    ENDERECO.......: [".
-           05  LINE 11  COLUMN 41 
-               VALUE  "                           ]".
-           05  LINE 12  COLUMN 01 
-               VALUE  "    COMPLEMENTO....: [          ]".
-           05  LINE 13  COLUMN 01 
-               VALUE  "    BAIRRO.........: [".
-           05  LINE 13  COLUMN 41 
-               VALUE  "  ]".
-           05  LINE 14  COLUMN 01 
-               VALUE  "    CIDADE.........: [".
-           05  LINE 14  COLUMN 41 
-               VALUE  "  ]".
-           05  LINE 15  COLUMN 01 
-               VALUE  "    ESTADO.........: [  ]".
-           05  LINE 16  COLUMN 01 
-               VALUE  "    CEP............: [     -   ]".
-           05  LINE 17  COLUMN 01 
-               VALUE  "    TELEFONE.......: [  ]-[    -     ]".
-           05  LINE 18  COLUMN 01 
-               VALUE  "    TIPO PACOTE....: [ ]-[           ]".
-           05  LINE 19  COLUMN 01 
-               VALUE  "    QTDE PONTOS....: [ ]".
-           05  LINE 20  COLUMN 01 
-               VALUE  "    DIA VENCIMENTO.: [  ]".
-           05  LINE 21  COLUMN 01 
-               VALUE  "    DATA INCLUSAO..: [          ]".
-           05  LINE 22  COLUMN 01 
-               VALUE  "    ออออออออออออออออออออออออออออออออออออ".
-           05  LINE 22  COLUMN 41 
-               VALUE  "ออออออออออออออออออออออออออออออออออออ".
-           05  LINE 23  COLUMN 01 
-               VALUE  "    MENSAGENS:".
-           05  LINE 24  COLUMN 01 
-               VALUE  "    ออออออออออออออออออออออออออออออออออออ".
-           05  LINE 24  COLUMN 41 
-               VALUE  "ออออออออออออออออออออออออออออออออออออ".
-           05  S-DATA
-               LINE 05  COLUMN 66  PIC 99/99/9999
-               FROM   W-DATE.
-           05  S-CPF
-               LINE 09  COLUMN 23  PIC X(11)
-               TO     CPF.
-           05  S-NOME
-               LINE 10  COLUMN 23  PIC X(30)
-               TO     NOME.
-           05  S-ENDERECO
-               LINE 11  COLUMN 23  PIC X(45)
-               TO     ENDERECO.
-           05  S-COMPLEMENTO
-               LINE 12  COLUMN 23  PIC X(10)
-               TO     COMPLEMENTO.
-           05  S-BAIRRO
-               LINE 13  COLUMN 23  PIC X(20)
-               TO     BAIRRO.
-           05  S-CIDADE
-               LINE 14  COLUMN 23  PIC X(20)
-               TO     CIDADE.
-           05  S-ESTADO
-               LINE 15  COLUMN 23  PIC X(02)
-               TO     ESTADO.
-           05  S-CEP1
-               LINE 16  COLUMN 23  PIC X(05)
-               TO     CEP1.
-           05  S-CEP02
-               LINE 16  COLUMN 29  PIC X(03)
-               TO     CEP2.
-           05  S-DDD
-               LINE 17  COLUMN 23  PIC 9(02)
-               TO     DDD.
-           05  S-TEL1
-               LINE 17  COLUMN 28  PIC X(04)
-               TO     TEL1.
-           05  S-TEL2
-               LINE 17  COLUMN 34  PIC X(04)
-               TO     TEL2.
-           05  S-TIPO1
-               LINE 18  COLUMN 23  PIC X(01)
-               TO     TIPO1.
-           05  S-TIPO2
-               LINE 18  COLUMN 27  PIC X(11)
-               TO     TIPO2.
-           05  S-PONTOS
-               LINE 19  COLUMN 23  PIC 9
-               TO     QTDE-PONTOS-RESIDENCIA.
-           05  S-VENCIMENTO
-               LINE 20  COLUMN 23  PIC 9(02)
-               TO     VENCIMENTO-FATURA.
-           05  S-DT-INCLUSAO
-               LINE 21  COLUMN 23  PIC XX/XX/XXXX
-               TO     DATA-INCLUSAO-CLIENTE.
-
+           05 BLANK SCREEN.
+           05 LINE 01 COLUMN 01 PIC X(80)
+           FROM LINHA.
+           05 LINE 03 COLUMN 35 VALUE "TVMACK".
+           05 LINE 05 COLUMN 04 VALUE "INCLUSAO DE CLIENTE".
+           05 LINE 05 COLUMN 66 PIC 99/99/9999
+           FROM W-DATE.
+           05 LINE 07 COLUMN 01 PIC X(80)
+           FROM LINHA.
+           
+           05 LINE 09 COLUMN 04
+           VALUE "CPF DO CLIENTE.: [           ]".
+           
+           05 LINE 10 COLUMN 04
+           VALUE "NOME DO CLIENTE: [".
+           05 LINE 10 COLUMN 34 VALUE "]".
+           
+           05 LINE 11 COLUMN 04
+           VALUE "ENDERECO.......: [".
+           05 LINE 11 COLUMN 49 VALUE "]".
+           
+           05 LINE 12 COLUMN 04
+           VALUE "COMPLEMENTO....: [          ]".
+           
+           05 LINE 13 COLUMN 04
+           VALUE "BAIRRO.........: [".
+           05 LINE 13 COLUMN 42 VALUE "]".
+           
+           05 LINE 14 COLUMN 04
+           VALUE "CIDADE.........: [".
+           05 LINE 14 COLUMN 42 VALUE "]".
+           
+           05 LINE 15 COLUMN 04
+           VALUE "ESTADO.........: [  ]".
+           
+           05 LINE 16 COLUMN 04
+           VALUE "CEP............: [     -   ]".
+           
+           05 LINE 17 COLUMN 04
+           VALUE "TELEFONE.......: [  ]-[    -    ]".
+           
+           05 LINE 18 COLUMN 04
+           VALUE "TIPO PACOTE....: [ ]-[          ]".
+           
+           05 LINE 19 COLUMN 04
+           VALUE "QTDE PONTOS....: [ ]".
+           
+           05 LINE 20 COLUMN 04
+           VALUE "DIA VENCIMENTO.: [  ]".
+           
+           05 LINE 21 COLUMN 04
+           VALUE "DATA INCLUSAO..: [  /  /    ]".
+           
+           05 LINE 22 COLUMN 04
+           VALUE "DATA ULT ALTERACAO [  /  /    ]".
+           
+           05 LINE 24 COLUMN 01 PIC X(80)
+           FROM LINHA.
+           05 LINE 25 COLUMN 05
+           VALUE "MENSAGENS: ".
+           05 LINE 26 COLUMN 01 PIC X(80)
+           FROM LINHA.
+           
        PROCEDURE DIVISION.
        INICIO.
-           DISPLAY TELA.
-       
+           DISPLAY TELA.    
+           STOP RUN.
+      *TODO - FINISH SCREEN
        EXIT program 
       

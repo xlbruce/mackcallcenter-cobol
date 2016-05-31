@@ -67,7 +67,7 @@
            05 LINE 01 COLUMN 01 PIC X(80)
            FROM LINHA.
            05 LINE 03 COLUMN 35 VALUE "TVMACK".
-           05 LINE 05 COLUMN 04 VALUE "INCLUSAO DE CLIENTE".
+           05 LINE 05 COLUMN 04 VALUE "ALTERACAO DE CLIENTE".
            05 LINE 05 COLUMN 66 PIC 99/99/9999
            FROM W-DATE.
            05 LINE 07 COLUMN 01 PIC X(80)
@@ -158,9 +158,9 @@
            
            
                IF ST-CLIENTE = "23"
-                   DISPLAY "Produto nao cadastrado" at 2515
+                   DISPLAY "Cliente nao cadastrado" at 2515
                ELSE 
-                             ACCEPT S-NOME
+                   display S-NOME
                    display S-ENDERECO
                    display S-COMPLEMENTO
                    display S-BAIRRO
@@ -185,6 +185,5 @@
                   ACCEPT S-VENCIMENTO
                   REWRITE REG-CLIENTE
                END-IF
-           STOP RUN.
       *TODO - FINISH SCREEN
        EXIT program 
